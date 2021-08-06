@@ -19,7 +19,7 @@ if uri.startswith("postgres://"):
 # rest of connection code using the connection string `uri`
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(uri, 'sqlite:///data.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = uri
 app.config['SQLALCHEMY_TRACK_MODIFICTIONS'] = False
 app.secret_key='akula'
 api =  Api(app)
